@@ -1,16 +1,11 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = $_POST["name"];
-    $email = $_POST["email"];
-    $message = $_POST["message"];
+  $name = $_POST['name'];
+  $email = $_POST['email'];
+  $message = $_POST['message'];
 
-    // Send the message to your email
-    $to = "anhminh7802@gmail.com";
-    $subject = "Message from your website";
-    $body = "Name: $name\nEmail: $email\nMessage: $message";
-    mail($to, $subject, $body);
+  $to = 'anhminh7802@gmail.com';
+  $subject = 'Message from Website';
+  $body = "Name: $name\nEmail: $email\nMessage: $message";
 
-    // Display a success message
-    echo "Thank you for your message!";
-}
+  mail($to, $subject, $body);
 ?>
